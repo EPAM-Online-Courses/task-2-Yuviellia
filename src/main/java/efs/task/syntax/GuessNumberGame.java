@@ -35,8 +35,9 @@ public class GuessNumberGame {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-        int numberInputted, guesses;
-        int number = random.nextInt(upperBound - 1 + 1) + 1;
+        int numberInputted;
+        int guesses;
+        int number = random.nextInt(upperBound) + 1;
         String input;
 
         for(guesses = 1; guesses <= guessesMax; guesses++) {
@@ -63,6 +64,7 @@ public class GuessNumberGame {
                 System.out.println("To " + UsefulConstants.TO_LESS);
             }
         }
+
         System.out.println(UsefulConstants.UNFORTUNATELY + ", wyczerpałeś limit prób (" + guesses + ") do odgadnięcia liczby" + number);
     }
 
